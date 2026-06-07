@@ -15,7 +15,9 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
       - name: Grant permission
-        run: chmod +x gradlew
+        run: |
+          chmod +x gradlew 2>/dev/null || true
+          ls -la gradlew || echo "gradlew not found"
       - name: Build debug APK
         run: ./gradlew assembleDebug --stacktrace 2>&1 | tee build.log
       - name: Upload APK
