@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.rajkarmakar.kino"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.rajkarmakar.kino"
-        minSdk = 24
-        targetSdk = 36
+        minSdk = 26
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0.0"
 
@@ -25,7 +25,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
