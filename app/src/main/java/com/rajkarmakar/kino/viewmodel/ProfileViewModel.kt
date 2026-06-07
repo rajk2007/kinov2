@@ -5,14 +5,12 @@ import androidx.lifecycle.viewModelScope
 import com.rajkarmakar.kino.data.model.KinoTheme
 import com.rajkarmakar.kino.data.model.UserProfile
 import com.rajkarmakar.kino.data.local.PreferencesManager
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class ProfileViewModel @Inject constructor(
+
+class ProfileViewModel constructor(
     private val preferencesManager: PreferencesManager
 ) : ViewModel() {
 

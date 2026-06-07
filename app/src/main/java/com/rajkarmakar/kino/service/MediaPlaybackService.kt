@@ -14,9 +14,8 @@ import androidx.media3.session.MediaSession
 import androidx.media3.session.MediaSessionService
 import com.rajkarmakar.kino.MainActivity
 import com.rajkarmakar.kino.R
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class MediaPlaybackService : MediaSessionService() {
 
     private var mediaSession: MediaSession? = null

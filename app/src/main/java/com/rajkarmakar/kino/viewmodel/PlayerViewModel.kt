@@ -10,14 +10,12 @@ import com.rajkarmakar.kino.data.model.ContentType
 import com.rajkarmakar.kino.data.model.MediaItem
 import com.rajkarmakar.kino.data.model.PlayerState
 import com.rajkarmakar.kino.data.repository.MediaRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import javax.inject.Inject
 
-@HiltViewModel
-class PlayerViewModel @Inject constructor(
+
+class PlayerViewModel constructor(
     private val repository: MediaRepository
 ) : ViewModel() {
 

@@ -5,11 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.rajkarmakar.kino.data.model.ContentRail
 import com.rajkarmakar.kino.data.model.MediaItem
 import com.rajkarmakar.kino.data.repository.MediaRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 sealed class HomeUiState {
     object Loading : HomeUiState()
@@ -17,8 +15,8 @@ sealed class HomeUiState {
     data class Error(val message: String) : HomeUiState()
 }
 
-@HiltViewModel
-class HomeViewModel @Inject constructor(
+
+class HomeViewModel constructor(
     private val repository: MediaRepository
 ) : ViewModel() {
 

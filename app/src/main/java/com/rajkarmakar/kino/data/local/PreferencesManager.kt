@@ -5,16 +5,14 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
 import com.rajkarmakar.kino.data.model.KinoTheme
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import javax.inject.Inject
 import javax.inject.Singleton
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "kino_prefs")
 
 @Singleton
-class PreferencesManager @Inject constructor(
+class PreferencesManager constructor(
     @ApplicationContext private val context: Context
 ) {
     private val dataStore = context.dataStore

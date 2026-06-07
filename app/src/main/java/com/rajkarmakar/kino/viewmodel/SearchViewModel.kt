@@ -5,15 +5,13 @@ import androidx.lifecycle.viewModelScope
 import com.rajkarmakar.kino.data.model.ContentType
 import com.rajkarmakar.kino.data.model.MediaItem
 import com.rajkarmakar.kino.data.repository.MediaRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @OptIn(FlowPreview::class)
-@HiltViewModel
-class SearchViewModel @Inject constructor(
+
+class SearchViewModel constructor(
     private val repository: MediaRepository
 ) : ViewModel() {
 

@@ -5,14 +5,12 @@ import androidx.lifecycle.viewModelScope
 import com.rajkarmakar.kino.data.model.LibrarySection
 import com.rajkarmakar.kino.data.model.MediaItem
 import com.rajkarmakar.kino.data.repository.MediaRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class LibraryViewModel @Inject constructor(
+
+class LibraryViewModel constructor(
     private val repository: MediaRepository
 ) : ViewModel() {
 

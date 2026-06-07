@@ -2,11 +2,10 @@ package com.rajkarmakar.kino.data.repository
 
 import com.rajkarmakar.kino.data.model.*
 import kotlinx.coroutines.delay
-import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class MediaRepository @Inject constructor() {
+class MediaRepository constructor() {
 
     private val mockMedia = listOf(
         MediaItem(

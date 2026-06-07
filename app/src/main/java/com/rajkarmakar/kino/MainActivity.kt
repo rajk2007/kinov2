@@ -11,9 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.core.view.WindowCompat
 import com.rajkarmakar.kino.ui.navigation.KinoNavigation
 import com.rajkarmakar.kino.ui.theme.KinoTheme
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
